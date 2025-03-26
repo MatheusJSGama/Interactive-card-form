@@ -1,9 +1,10 @@
 # Advace generator
 
-<img src="./Advice-generator-App/imagens/Screenshot-aplication.png">
+# Vídeo da aplicação
+https://github.com/user-attachments/assets/b4eff314-bcef-4e4d-8cd0-6b589f0c9a0d
 
 # Propósito da aplicação:
-- O propósito da aplicação é trabalhar com a DOM da aplicação e a validação de campos de formulário.
+- O propósito da aplicação é trabalhar com a manipulação da DOM e a validação de campos de formulário.
 
 # Funcionalidades:
 - A aplicação é um formulário de cadastro para cartão de crédito que faz validações dos inputs.
