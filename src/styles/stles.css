@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body{
+    height: 100dvh;
+    width: 100%;
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+}
+
+
+.container{
+    font-family: "Space Grotesk", sans-serif;
+    display: grid;
+    grid-template-areas: "cards form-container";
+    grid-template-columns: 33.875rem 23.812rem;
+    grid-column-gap: 12.5rem;
+    place-content: center;
+}
+
+.container .cards {
+    grid-area: cards;
+    height: 32.9374rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .cards .card {
+    width: 27.9375rem;
+    height: 15.3125rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .cards .card-front{
+    grid-area: card-front;
+    background-image: url("../../src/images/bg-card-front.png");
+    padding: 1.875rem;
+    display: grid;
+    grid-template-areas: "card-logo card-logo"
+    "card-number-image card-number-image"
+    "cardholder-name-image card-expiration-image";
+    grid-template-columns: 1fr 11.25rem;
+    grid-template-rows: 111px 1fr 1.125rem;
+}
+.card-logo{
+    grid-area: card-logo;
+}
+
+.card-number-image{
+    grid-area: card-number-image;
+    font-size: 1.875rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.cardholder-name-image{
+    grid-area: cardholder-name-image;
+}
+
+.container .cards .card-back{
+    grid-area: card-back;
+    align-self: self-end;
+    background-image: url("../../src/images/bg-card-back.png");
+    padding: 3.5625rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.text-card-image{
+    color: #ffff;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 0.1875rem;
+}
+
+.container .cards .card-back .cvc-card-image{
+    width: 2rem;
+    height: 1.125rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.1875rem;
+}
+
+.container .form-container{
+    grid-area: form-container;
+    display: grid;
+    place-content: center;
+}
+
+.container .form-container .form{
+    display: grid;
+    grid-template-areas: 
+    "cardholder-name-container cardholder-name-container"
+    "card-number-container card-number-container"
+    "card-expirate-date-container cvc-container"
+    "expirated-errors cvc-errors"
+    "form-btn form-btn";
+    grid-template-columns: 10.625rem 11.9375rem;
+    grid-template-rows: 5rem 5rem 4.375rem 0.9375rem 3.3125rem;
+    grid-row-gap: 0.625rem;
+    grid-column-gap: 1.25rem;
+}
+
+.container .form-container .form .cardholder-name-container{
+    grid-area: cardholder-name-container;
+}
+
+.container .form-container .form .card-number-container{
+    grid-area: card-number-container;
+}
+
+.container .form-container .form .card-expirate-date-container{
+    grid-area: card-expirate-date-container;
+}
+
+.container .form-container .form .expirated-errors{
+    grid-area: expirated-errors;
+    display: grid;
+    grid-template-areas: "month-invalid year-invalid";
+    grid-template-columns: repeat(2, 5.3125rem);
+}
+
+.container .form-container .form .cvc-container{
+    grid-area: cvc-container;
+}
+.container .form-container .form .cvc-errors{
+    grid-area: cvc-errors;
+}  
+
+.input{
+    height: 2.8125rem;
+    border: solid 1px #DFDEE0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.border-filled{
+    border-color: hsl(249, 99%, 64%);
+}
+
+.border-error{
+    border-color: red;
+}
+.input::placeholder{
+    color: #9d94a1;
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.text{
+    color: #21092F;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.name, .card-number, .cvc-number{
+    width: 100%;
+    border-radius: 11px;
+    padding: 1rem 0.6875rem;
+}
+
+.name, .card-number, .month-expirated, .year-expirated, .cvc-number{
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #21092F;
+}
+
+.month-expirated, .year-expirated{
+    width: 5rem;
+    height: 45px;
+    border-radius: 11px;
+    padding: 1rem 0.625rem;
+}
+
+.month-expirated::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.year-expirated::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.cvc-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.cardholder-name-container, .card-number-container, .card-expirate-date-container, .cvc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .form-container .form .date-expirated {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn{
+    grid-area: form-btn;
+}
+
+.btn{
+    font-family: "Space Grotesk", sans-serif;
+    height: 3.3125rem;
+    border-radius: 11px;
+    background-color: #21092F;
+    color: #ffff;
+    font-size: 1.25rem;
+}
+
+.container .form-container .box-sucess{
+    width: 23.812rem;
+    height: 18.125rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thankyou{
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #21092F;
+    letter-spacing: 0.125rem;
+}
+
+.sucess-text{
+    color: #8F8694;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.sucess-btn{
+    width: 100%;
+    cursor: pointer;
+}
+
+.error-close{
+    display: none;
+}
+
+.expirated-errors.error, .cvc-errors.error {
+    display: grid;
+}
+
+.error{
+    color: red;
+    font-size: 0.8125rem;
+    display: block;
+}
+
+
+.month-invalid{
+    grid-area: month-invalid;
+}
+
+.year-invalid{
+    grid-area: year-invalid;
+} 
+
+.container .form-container .form.close{
+    animation: fadeOut 1s ease-in-out forwards;
+    display: none;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+        
+    }
+}
+
+.container .form-container .box-sucess.show{
+    display: flex;
+    animation: fadeIn 1.0s ease-in forwards;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}

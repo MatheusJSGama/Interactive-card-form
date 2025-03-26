@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive card design</title>
+    <link rel="stylesheet" href="./src/styles/stles.css">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/mediaqueries.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="cards">
+            <div class="card-front card">
+                <img src="./src/images/card-logo.svg" class="card-logo" alt="card-logo">
+                <p class="text-card-image card-number-image">0000 0000 0000 0000</p>
+                <p class="text-card-image cardholder-name-image">JANE APPLES</p>
+                <div class="card-expiration-image">
+                    <p class="text-card-image ">
+                        <span class="month-card-image">00</span>
+                        /
+                        <span class="year-card-image">0000</span>
+                    </p>
+                </div>
+            </div>
+            <div class="card-back card">
+                <p class="text-card-image cvc-card-image">000</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <form method="post" action="index.html" class="form">
+                <div class="cardholder-name-container">
+                    <p class="cardholder-name text">CARDHOLDER NAME</p>
+                    <input type="text" class="name input" placeholder="Ex. Jane Apples">
+                    <p class="field-blank-name error-close">Can't be blank</p>
+                </div>
+                <div class="card-number-container">
+                    <p class="text">CARD NUMBER</p>
+                    <input type="text" class="card-number input" placeholder="Ex. 1234 5678 9123 0000" maxlength="19">
+                    <p class="field-blank-card-number error-close">Can't be blank</p>
+                    <p class="wrong-format error-close">Wrong format required 16 numbers</p>
+                </div>
+                <div class="card-expirate-date-container">
+                    <P class="expirate-date text">EXP. DATE (MM/YYYY)</P>
+                    <div class="date-expirated">
+                        <input type="text" class="month-expirated input" placeholder="MM" min="1" max="12" maxlength="2">
+                        <input type="text" class="year-expirated input" placeholder="YYYY" maxlength="4">
+                    </div>
+                </div>
+                <div class="expirated-errors error-close">
+                    <p class="month-invalid error-close">MM Invalid</p>
+                    <p class="year-invalid error-close">YYYY invalid</p>
+                </div>
+                <div class="cvc-container">
+                    <P class="cvc-card text">CVC</P>
+                    <input type="text" class="cvc-number input" placeholder="Ex. 123" maxlength="3">
+                </div>
+                <div class="cvc-errors error-close">
+                    <p class="cvc-invalid close">Cvc invalid</p>
+                </div>
+                <button type="submit" class="btn form-btn">Confirm</button>
+            </form>
+            <div class="box-sucess">
+                <img src="src/images/icon-complete.svg" alt="" class="image">
+                <p class="thankyou">THANK YOU!</p>
+                <P class="sucess-text">We've added your card details</P>
+                <button class="sucess-btn btn">Continue</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="src/scripts/index.js"></script>
+</body>
+
+</html>

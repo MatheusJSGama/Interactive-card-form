@@ -1,0 +1,130 @@
+@media(max-width: 1150px){
+    .container{
+        grid-column-gap: 4.375rem;
+    }
+}
+
+@media(max-width: 1024px){
+    body{
+        background-image: url("/src/images/bg-main-mobile.png");
+        background-size: 100% 35%; 
+        place-content: center;
+    }
+     
+    .container{
+        grid-template-areas: "cards "
+        "form-container";
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-row-gap: 3rem;
+    }
+
+    .container .cards{
+        height: 18.75rem;
+        width: 28.125rem;
+        display: block;
+        position: relative;
+    }
+
+    .container .cards .card{
+        width: 23.3125rem;
+        height: 12.5rem;
+    }
+
+    .container .cards .card-front{
+        padding: 0.9375rem;
+        position: absolute;
+        grid-template-columns: 1fr 7.5rem;
+        grid-template-rows: 6.25rem 2.5rem 1.125rem;
+        border-radius: 10px;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    .card-number-image{
+        font-size: 1.375rem;
+    }
+
+    .container .cards .card-back{
+        border-radius: 10px;
+        padding: 2.6875rem;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .container .cards .card-back .cvc-card-image{
+            margin-bottom: 0.3125rem;
+        }
+}
+
+
+@media(max-width: 475px){
+    body{
+        background-size: 100% 30%;
+    }
+
+    .container .cards{
+        height: 12.5rem;
+        width: 19.375rem;
+        display: block;
+    }
+
+    .container .cards .card{
+        width: 15.625rem;
+        height: 8.125rem;
+    }
+
+    .card-logo{
+        width: 3.375rem;
+        height: 1.875rem;
+    }
+
+    .container .cards .card-front{
+        padding: 0.625rem;
+        grid-template-columns: 1fr 4.375rem;
+        grid-template-rows: 3.125rem 1fr 0.75rem;
+    }
+
+    .cardholder-name-image, .card-expiration-image{
+        font-size: 0.5625rem;
+    }
+
+    .card-number-image{
+        font-size: 0.9375rem;
+    }
+
+    .container .cards .card-back{
+        padding: 1.875rem;
+        right: 0;
+    }
+
+    .container .cards .card-back .cvc-card-image{
+        width: 1.375rem;
+        height: 0.625rem;
+        font-size: 0.5625rem;
+        margin-top: 0.3125rem;
+    }
+
+    .container .form-container .form{
+        grid-template-columns: 9.0625rem 9.6875rem;
+        grid-template-rows: 4.3125rem repeat(2, 4.3125rem) 0.9375rem 4.0625rem;
+        grid-column-gap: 0.625rem;
+    }
+
+    .expirated-errors{
+        grid-template-columns: 4.375rem 4.6875rem;
+    }
+
+    .container .form-container .form .expirated-errors{
+        grid-template-columns: 4.375rem 4.6875rem;
+    }
+
+    .month-expirated, .year-expirated{
+        width: 4.375rem;
+    }
+
+    .container .form-container .box-sucess{
+        width: 20rem;
+    }
+}
